@@ -43,4 +43,5 @@ void clear_stack(stack_t *head);
 void print_stack(stack_t **stack_head, unsigned int line_number);
 void print_top(stack_t **stack_head, unsigned int line_number);
 void push_node(stack_t **head, unsigned int counter);
+void swap_two_elements(stack_t **head, unsigned int counter)
 #endif
