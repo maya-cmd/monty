@@ -17,7 +17,7 @@ void print_stack(stack_t **stack_head, unsigned int line_number)
     
     while (current_node != NULL)
     {
-        printf("%d\n", current_node->data);
+        printf("%d\n", current_node->n);
         current_node = current_node->next;
     }
 }

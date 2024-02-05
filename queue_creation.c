@@ -16,10 +16,10 @@ void queue_creation(stack_t **new_node, __attribute__((unused))unsigned int line
 		return;
 	}
 	temp_node = head;
-	while (tmp_node->next != NULL)
+	while (temp_node->next != NULL)
 		temp_node = temp_node->next;
 
-	temp->next = *new_node;
+	temp_node->next = *new_node;
 	(*new_node)->prev = temp_node;
 
 }

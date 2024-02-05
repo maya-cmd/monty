@@ -15,6 +15,5 @@ stack_t *node_creation(int n)
         node->next = NULL;
         node->prev = NULL;
         node->n = n;
-        return (node);
+	return(node);
 }
-~

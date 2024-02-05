@@ -14,5 +14,5 @@ void clear_stack(stack_t *head)
                 temp_ptr = head->next;
                 free(head);
                 head = temp_ptr;
-        }
+       }
 }

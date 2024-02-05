@@ -1,8 +1,10 @@
 #include "monty.h"
+
 /**
  * file_opening - Function to open the file
  * @file_title: The  name path of the file
  * Return: void
+ *
  */
 void file_opening(char *file)
 {
@@ -20,13 +22,13 @@ void file_opening(char *file)
  */
 void file_reading(FILE *fd)
 {
-        int line_iterator, opcode_format = 0;
+        int line_iterator = 1; 
+	int opcode_format = 0;
         char *buffer = NULL;
         size_t line_length = 0;
-
-        line_iterator = 1;
-
-        while (getline(&buffer, &line_length, fd) != -1;)
+	
+	line_iterator = getline(&buffer, &line_length, fd);
+        while (line_iterator != -1)
         {
                 opcode_format = partition_line(buffer, line_iterator, opcode_format);
                 line_iterator++;
@@ -129,10 +131,10 @@ void handle_function(op_handler handler, char *operation, char *argument, int li
                         if (isdigit(argument[j]) == 0)
                                  fprintf(stderr, "L%d: usage: push integer\n", line_iterator);
                 }
-		node = node_creation(atoi(argument * flag)
+		node = node_creation(atoi(argument) * val_flag);
                 if (opcode_format == 0)
                         handler(&node, line_iterator);
-		if (format == 1)
+		if (opcode_format == 1)
 			queue_creation(&node, line_iterator);
         }
         else

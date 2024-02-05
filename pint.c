@@ -3,19 +3,19 @@
 /**
  * print_top - prints the top element of the stack
  * @stack_head: pointer to the head of the stack
- * @line_number: line number
+ * @line_iterator line number
  * Return: void
  */
-void print_top(stack_t **stack_head, unsigned int line_number)
+void print_top(stack_t **stack_head, unsigned int line_iterator)
 {
     if (*stack_head == NULL)
     {
-        fprintf(stderr, "L%u: can't print top, stack empty\n", line_number);
-        fclose(bus.file);
-        free(bus.content);
-        free_stack(*stack_head);
+        fprintf(stderr, "L%u: can't print top, stack empty\n", line_iterator);
+        fclose(container.file);
+        free(container.args_present);
+        clear_stack(*stack_head);
         exit(EXIT_FAILURE);
     }
-    printf("%d\n", (*stack_head)->data);
+    printf("%d\n", (*stack_head)->n);
 }
 
