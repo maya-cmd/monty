@@ -45,4 +45,5 @@ void print_top(stack_t **stack_head, unsigned int line_number);
 void push_node(stack_t **head, unsigned int counter);
 void queue_creation(stack_t **new_node, __attribute__((unused))unsigned int line_iterator);
 stack_t *node_creation(int n);
+void swap_two_elements(stack_t **head, unsigned int counter)
 #endif
