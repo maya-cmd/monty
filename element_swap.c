@@ -20,9 +20,9 @@ void swap_two_elements(stack_t **head, unsigned int counter)
 	if (stack_length < 2)
 	{
 		fprintf(stderr, "L%d: Error: Stack too short to perform swap\n", counter);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
+		fclose(container.file);
+		free(container.args_present);
+		clear_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	current = *head;
